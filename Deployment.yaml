@@ -21,7 +21,7 @@ spec:
         app: poc
     spec:
       containers:
-      - name: pocsample
+        - name: pocsample
         image: pnegioptum/pocrepo1:v1
       ports:
         - containerPort: 3000
