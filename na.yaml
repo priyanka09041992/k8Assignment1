@@ -26,4 +26,4 @@ spec:
         ports:
         - containerPort: 3000
       nodeSelector:
-        project: pnegipoc
+        node: workernode1
