@@ -26,4 +26,4 @@ spec:
         ports:
         - containerPort: 3000
       nodeSelector:
-      - node: workernode1
+        node: workernode1
