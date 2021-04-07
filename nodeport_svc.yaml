@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: poc-service
 spec:
+  type: NodePort
   selector:
     app: poc
-  type: NodePort
   ports:
-  - protocol: TCP
-    port: 3000
-    targetPort: 3000
-    nodePort: 30008
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30008
