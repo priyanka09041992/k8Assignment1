@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pnegi-poc
+  labels:
+    app: poc
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: poc
+  template:
+    metadata:
+      name: pnegi-poc
+      labels:
+        app: poc
+    spec:
+      containers:
+      - name: pocsample
+        image: pnegioptum/pocrepo1:v1
+        ports:
+        - containerPort: 3000
+      nodeSelector:
+      - node: workernode1
