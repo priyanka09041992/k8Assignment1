@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: pnegi-poc
+  name: devops-deamon
   namespace: pnegi13
   labels:
     app: poc
