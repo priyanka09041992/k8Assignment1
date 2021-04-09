@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: pnegi-poc
+  namespace: pnegi13
+  labels:
+    app: poc
+spec:
+  selector:
+    matchLabels:
+      app: poc
+  template:
+    metadata:
+      name: pnegi-poc
+      labels:
+        app: poc
+    spec:
+      containers:
+      - name: pocsample
+        image: pnegioptum/pocrepo1:v1
+        ports:
+          - containerPort: 3000
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "300m"
+          requests:
+            memory: "200Mi"
+            cpu: "200m"
