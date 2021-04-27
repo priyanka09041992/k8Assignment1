@@ -7,4 +7,4 @@ metadata:
     app: poc
 data:
   hostip: 10.198.23.4
-  post: 8080
+  port: 8080
