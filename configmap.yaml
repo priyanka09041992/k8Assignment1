@@ -12,7 +12,6 @@ metadata:
   namespace: pnegi13
   labels:
     app: poc
-data
 data:
   hostip: 10.198.23.4
   post: 8080
