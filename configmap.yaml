@@ -1,11 +1,4 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: pnegi13
-  labels:
-    app: poc
----
-apiVersion: v1
+apiVersion: apps/v1
 kind: ConfigMap
 metadata:
   name: pnegi-poc-cm
