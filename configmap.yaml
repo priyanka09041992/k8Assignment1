@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: pnegi-poc-cm
@@ -6,5 +6,5 @@ metadata:
   labels:
     app: poc
 data:
-  hostip: 10.198.23.4
-  port: 8080
+  hostip: "10.198.23.4"
+  port: "8080"
