@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: clusterrole-poc
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  - endpoints
+  - nodes
+  - secrets
+  verbs:
+  - list
+  - watch
+  - pods
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
