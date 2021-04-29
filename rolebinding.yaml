@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    app: poc
+  name: pnegi13-role-binding
+  namespace: pnegi13
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: testRole
+subjects:
+- kind: ServiceAccount
+  name: pnegi13-serviceaccount
